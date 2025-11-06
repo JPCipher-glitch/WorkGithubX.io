@@ -1,4 +1,3 @@
-﻿#define CATCH_CONFIG_MAIN
 #include <catch2/catch_test_macros.hpp>
 #include <SFML/Window.hpp>
 #include <iostream>
@@ -18,20 +17,22 @@ bool isPair(unsigned int number)
 //    CHECK(isPair(16));
 //}
 
-SCENARIO("Il etait une fois, une puissance.", "[x^n]")
-{
-    GIVEN("Parmis ces puissances :")
+int main() {
+    SCENARIO("Il etait une fois, une puissance.", "[x^n]")
     {
-        int n = 0;
-
-        REQUIRE(n >= 0);
-
-        WHEN("On augmente la puissance")
+        GIVEN("Parmis ces puissances :")
         {
-            n += 2;
-            THEN("La puissance est plus grande ?")
+            int n = 0;
+    
+            REQUIRE(n >= 0);
+    
+            WHEN("On augmente la puissance")
             {
-                REQUIRE(n < 2);
+                n += 2;
+                THEN("La puissance est plus grande ?")
+                {
+                    REQUIRE(n < 2);
+                }
             }
         }
     }
