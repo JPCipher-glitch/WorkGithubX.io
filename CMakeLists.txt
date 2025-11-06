@@ -64,7 +64,7 @@ enable_testing()
 
 # Ajoutez une source à l'exécutable de ce projet.
 add_executable (CMake-VCPKG "main.cpp" "main.h")
-target_link_libraries(CMake-VCPKG PRIVATE Catch2::Catch2WithMain)
+target_link_libraries(CMake-VCPKG PRIVATE Catch2::Catch2)
 target_link_libraries(CMake-VCPKG PRIVATE SFML::Network SFML::Graphics SFML::Window SFML::Audio SFML::System)
 
 #find_package(SFML COMPONENTS Network Graphics Window Audio System CONFIG REQUIRED)
