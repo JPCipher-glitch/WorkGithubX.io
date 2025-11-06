@@ -29,7 +29,7 @@ jobs:
       run: |
         vcpkg new --application
         vcpkg add port sfml
-      shell: cmd
+      shell: pwsh
 
     - name: Configure CMake
       working-directory: ${{github.workspace}}
@@ -45,7 +45,7 @@ jobs:
     - name: Run
       working-directory: ${{github.workspace}}/build/${{env.BUILD_TYPE}}
       run: |
-        start /b .\cours_test.exe
+        start /b .\CMake-VCPKG.exe
         timeout /t 5
-        taskkill /f /im cours_test.exe
-      shell: cmd
+        taskkill /f /im CMake-VCPKG.exe
+      shell: pwsh
