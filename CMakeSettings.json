@@ -1,0 +1,54 @@
+{
+  "configurations": [
+      {
+          "name": "x64-Debug",
+          "generator": "Ninja",
+          "configurationType": "Debug",
+          "inheritEnvironments": [ "msvc_x64_x64" ],
+          "buildRoot": "${projectDir}\\out\\build\\${name}",
+          "installRoot": "${projectDir}\\out\\install\\${name}",
+          "cmakeCommandArgs": "-DVCPKG_ROOT=%USERPROFILE%\\vcpkg",
+          "buildCommandArgs": "",
+          "ctestCommandArgs": "",
+          "variables": [
+                  {
+                    "name": "CMAKE_C_COMPILER",
+                    "value": "cl.exe"
+                  },
+                  {
+                    "name": "CMAKE_CXX_COMPILER",
+                    "value": "cl.exe"
+                  },
+                  {
+                    "name": "CMAKE_TOOLCHAIN_FILE",
+                    "value": "C:\\Users\\jp.leroy\\vcpkg\\scripts\\buildsystems\\vcpkg.cmake"
+                  }
+              ]
+          },
+          {
+            "name": "x64-Release",
+            "generator": "Ninja",
+            "configurationType": "Release",
+            "inheritEnvironments": [ "msvc_x64_x64" ],
+            "buildRoot": "${projectDir}\\out\\build\\${name}",
+            "installRoot": "${projectDir}\\out\\install\\${name}",
+            "cmakeCommandArgs": "-DVCPKG_ROOT=%USERPROFILE%\\vcpkg",
+            "buildCommandArgs": "",
+            "ctestCommandArgs": "",
+            "variables": [
+                {
+                  "name": "CMAKE_C_COMPILER",
+                  "value": "cl.exe"
+                },
+                {
+                  "name": "CMAKE_CXX_COMPILER",
+                  "value": "cl.exe"
+                },
+                {
+                  "name": "CMAKE_TOOLCHAIN_FILE",
+                  "value": "%VPKG_ROOT%\\scripts\\buildsystems\\vcpkg.cmake"
+                }
+            ]
+        }
+    ]
+}
